@@ -46,3 +46,7 @@ h2, h3 {
 span {
     display: none;
 }
+
+blockquote {
+    font-style: italic;
+}
