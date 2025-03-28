@@ -1,0 +1,48 @@
+img {
+    width: 375px;
+}
+
+body {
+	  font-family: "Helvetica";
+    --font-size: 12px;
+    --leading: 8px;
+    --line-height: calc(var(--font-size) + var(--leading));
+
+	  --font-size-ratio: 1.05;
+    font-size: calc(var(--font-size) * var(--font-size-ratio));
+
+    --n-cols: 2;
+    --table-width: calc((var(--n-cols) * var(--col-width)) + ((var(--n-cols)) * var(--col-gap)));
+    width: calc(var(--table-width) + var(--col-gap));
+
+    margin-top: var(--row-gap);
+}
+
+p, th {
+    font-family: "Helvetica";
+    --font-size: 12px;
+    --leading: 8px;
+    --line-height: calc(var(--font-size) + var(--leading));
+
+	  --font-size-ratio: 1.05;
+    font-size: calc(var(--font-size) * var(--font-size-ratio));
+    min-height: var(--line-height);
+    line-height: var(--line-height);
+}
+
+h2, h3 {
+    margin: 0;
+    --font-size: 22px;
+    --leading: 8px;
+    --line-height: calc(var(--font-size) + var(--leading));
+
+    min-height: var(--line-height);
+    line-height: var(--line-height);
+
+	  --font-size-ratio: 1.05;
+    font-size: calc(var(--font-size) * var(--font-size-ratio));
+}
+
+span {
+    display: none;
+}

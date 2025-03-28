@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-28 Fri 09:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Ben Taussig" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" href="./org.css">
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge9e9ef5">1. Original Wave (50s, 60s)</a>
+<ul>
+<li><a href="#org7c67c2a">1.1. [1954] Godzilla AKA Gojira Ishirô Honda</a></li>
+<li><a href="#orgbc7b21b">1.2. [1956] Godzilla, King of the Monsters! by Ishirô Honda and Terry O. Morse</a></li>
+<li><a href="#org8e06483">1.3. [1964] Ghidorah, the Three-Headed Monster AKA San daikaijû: Chikyû saidai no kessen by Ishirô Honda</a></li>
+<li><a href="#org103889f">1.4. [1963] King Kong vs. Godzilla AKA Kingu Kongu tai Gojira by Ishirô Honda and Tom Montgomery</a></li>
+<li><a href="#orge8845f1">1.5. [1964] Godzilla vs Mothra AKA Mosura tai Gojira by Ishirô Honda</a></li>
+<li><a href="#org5ac461e">1.6. [1967] Son of Godzilla AKA Kaijûtô no kessen: Gojira no musuko by Jun Fukuda</a></li>
+<li><a href="#orge8275b6">1.7. [1971] Godzilla vs. the Smog Monster AKA Gojira tai Hedorâ AKA Godzilla vs. Hedorah by Yoshimitsu Banno and Ishirô Honda</a></li>
+<li><a href="#orgc5811ca">1.8. [1972] Godzilla vs. Gigan AKA Chikyû kogeki meirei: Gojira tai Gaigan by Various Directors</a></li>
+<li><a href="#orgc45ae6c">1.9. [1973] Godzilla vs Megalon AKA Gojira tai Megaro by Various Directors</a></li>
+<li><a href="#org9f685d4">1.10. [1974] Godzilla vs. Mechagodzilla AKA Gojira tai Mekagojira by Jun Fukuda</a></li>
+<li><a href="#org866b604">1.11. [1975] Terror of Mechagodzilla AKA Mekagojira no gyakushu by Ishirô Honda and Jun Fukuda</a></li>
+<li><a href="#orgf63398e">1.12. [1977] Godzilla by Various Directors</a></li>
+</ul>
+</li>
+<li><a href="#org79661d3">2. 80s revival/90s run</a>
+<ul>
+<li><a href="#orgd1c6dba">2.1. [1984] Godzilla 1985: The Legend is Reborn AKA Gojira AKA The Return of Godzilla by Kôji Hashimoto</a></li>
+<li><a href="#org8543ac7">2.2. [1991] Godzilla vs. King Ghidorah AKA Gojira vs. Kingu Gidorâ by Kazuki Ômori and Kôji Hashimoto</a></li>
+<li><a href="#org95a6636">2.3. [1992] Godzilla vs Mothra: The Battle for Earth AKA Gojira vs. Mosura by Takao Okawara</a></li>
+<li><a href="#org530f9a9">2.4. [1993] Godzilla vs. Mechagodzilla II AKA Gojira tai Mekagojira by Takao Okawara and Kazuki Ômori</a></li>
+<li><a href="#orgb5354fa">2.5. [1999] Godzilla 2000: Millennium AKA Gojira ni-sen mireniamu by Takao Okawara</a></li>
+<li><a href="#org02e6f1c">2.6. [2001] Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack AKA Gojira, Mosura, Kingu Gidorâ: Daikaijû sôkôgeki by Shûsuke Kaneko</a></li>
+<li><a href="#org67165b9">2.7. [2002] Godzilla Against MechaGodzilla AKA Gojira tai Mekagojira by Masaaki Tezuka and Kazuki Ômori</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge9e9ef5" class="outline-2">
+<h2 id="orge9e9ef5"><span class="section-number-2">1.</span> Original Wave (50s, 60s)</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org7c67c2a" class="outline-3">
+<h3 id="org7c67c2a"><span class="section-number-3">1.1.</span> [1954] Godzilla AKA Gojira Ishirô Honda</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>American nuclear weapons testing results in the creation of a seemingly unstoppable, dinosaur-like beast.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/drbxzTWr794?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./9s4210.jpg" alt="9s4210.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgbc7b21b" class="outline-3">
+<h3 id="orgbc7b21b"><span class="section-number-3">1.2.</span> [1956] Godzilla, King of the Monsters! by Ishirô Honda and Terry O. Morse</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>A 400-foot (122-meter) dinosaur-like beast, awoken from undersea hibernation off the Japanese coast by atomic-bomb testing, attacks Tokyo.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/XnZ6Ktjynh0?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./oh1mgd.jpg" alt="oh1mgd.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org8e06483" class="outline-3">
+<h3 id="org8e06483"><span class="section-number-3">1.3.</span> [1964] Ghidorah, the Three-Headed Monster AKA San daikaijû: Chikyû saidai no kessen by Ishirô Honda</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>After a meteorite unleashes a three-headed beast upon Tokyo, Mothra tries to unite with Godzilla and Rodan to battle the extraterrestrial threat.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/87lLDKzpw0o?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./ramebl.jpg" alt="ramebl.jpg" />
+[./f5nj24.jpg]]
+</p>
+</div>
+</div>
+<div id="outline-container-org103889f" class="outline-3">
+<h3 id="org103889f"><span class="section-number-3">1.4.</span> [1963] King Kong vs. Godzilla AKA Kingu Kongu tai Gojira by Ishirô Honda and Tom Montgomery</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Mr. Tako, the chairman of a pharmaceutical company, learns of roma tomato-sized berries that grow on Farou Island , are a miracle cure, and that the natives worship a god called Kingkong who has allegedly grown to giant size from eating the berries. What better way to promote the product, Tako figures, than to bring the creature back to Japan? So he leads an expedition with Sakurai and Furue to get the berries and the monster. Meanwhile, some American pilots discover the chunk of the glacier Godzilla was sealed in back in 1955. Sakurai's sister's boyfriend Kazuo is busy trying to sell an invisible but superstrong wire, which of course no one wants until Kong escapes&#x2026;Staff edit:IMDb of the Japanese version:<a href="https://www.imdb.com/title/tt13364334/%5BSearch%5D">https://www.imdb.com/title/tt13364334/%5BSearch%5D</a></li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/WtgFm2LxJx4?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./u0e3zk.jpg" alt="u0e3zk.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-orge8845f1" class="outline-3">
+<h3 id="orge8845f1"><span class="section-number-3">1.5.</span> [1964] Godzilla vs Mothra AKA Mosura tai Gojira by Ishirô Honda</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>A greedy developer has placed huge machines to suck dry a part of the ocean near Tokyo so he can put luxury condos there. After a storm, a giant egg washes up on the beach nearby and is immediately put on public display. The developer's plans go awry when he disrupts Godzilla's rest and the monster goes stomping through Tokyo again. It's up to the elderly Mothra, and then to its two offspring, to save Tokyo from destruction.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/lRlttjvvvzE?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./ej2m07.jpg" alt="ej2m07.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org5ac461e" class="outline-3">
+<h3 id="org5ac461e"><span class="section-number-3">1.6.</span> [1967] Son of Godzilla AKA Kaijûtô no kessen: Gojira no musuko by Jun Fukuda</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>A reporter stumbles upon weather experiments on a tropical island , discovering giant mantises, a castaway woman, and an infant monster that Godzilla must learn to raise as a son.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/QWHCn5Y2WcQ?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./79xkv5.jpg" alt="79xkv5.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-orge8275b6" class="outline-3">
+<h3 id="orge8275b6"><span class="section-number-3">1.7.</span> [1971] Godzilla vs. the Smog Monster AKA Gojira tai Hedorâ AKA Godzilla vs. Hedorah by Yoshimitsu Banno and Ishirô Honda</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>A toxic, ever-evolving alien life-form from the Dark Gaseous Nebula arrives to consume rampant pollution, and neither Humanity nor Godzilla may be able to stop it.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/jdm8xgG5rR8?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./376k79.jpg" alt="376k79.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc5811ca" class="outline-3">
+<h3 id="orgc5811ca"><span class="section-number-3">1.8.</span> [1972] Godzilla vs. Gigan AKA Chikyû kogeki meirei: Gojira tai Gaigan by Various Directors</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Aliens from space plan to conquer the world using space monsters Gigan and King Ghidrah, which they control from their secret headquarters inside the head of the Godzilla-replica building at a theme park. The only thing that can stop them is the combined efforts of Godzilla and Anguirus.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/7wuS1WS-0FY?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./lsbf53.jpg" alt="lsbf53.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc45ae6c" class="outline-3">
+<h3 id="orgc45ae6c"><span class="section-number-3">1.9.</span> [1973] Godzilla vs Megalon AKA Gojira tai Megaro by Various Directors</h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li>The undersea nation of Seatopia sends the gigantic Megalon to destroy the world above - and it's up to Godzilla and a size-shifting robot, Jet Jaguar, to defeat him.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/h4fJP902N4U?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./rv2f38.jpg" alt="rv2f38.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org9f685d4" class="outline-3">
+<h3 id="org9f685d4"><span class="section-number-3">1.10.</span> [1974] Godzilla vs. Mechagodzilla AKA Gojira tai Mekagojira by Jun Fukuda</h3>
+<div class="outline-text-3" id="text-1-10">
+<ul class="org-ul">
+<li>Aliens intend to take over the planet and, just in case Godzilla tries to interfere, have built a mechanical version of him to put an end to his interference. The Earth humans summon the legendary King Seesar to assist Godzilla in the battle.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/Q6nue5cHYJc?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./3oopk1.jpg" alt="3oopk1.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org866b604" class="outline-3">
+<h3 id="org866b604"><span class="section-number-3">1.11.</span> [1975] Terror of Mechagodzilla AKA Mekagojira no gyakushu by Ishirô Honda and Jun Fukuda</h3>
+<div class="outline-text-3" id="text-1-11">
+<ul class="org-ul">
+<li>Aliens rebuild Mechagodzilla with the help of a demented scientist who has discovered a creature called Titanosaurus, which they intend to team up to defeat Godzilla. This was the last Godzilla movie made until 1985.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/ZfbTB7bu6aI?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./w1lo07.jpg" alt="w1lo07.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgf63398e" class="outline-3">
+<h3 id="orgf63398e"><span class="section-number-3">1.12.</span> [1977] Godzilla by Various Directors</h3>
+<div class="outline-text-3" id="text-1-12">
+<ul class="org-ul">
+<li>In 1977, the film was purchased and colorized by Luigi Cozzi in a terrible way of a old negative print. When American reporter Steve Martin investigates a series of mysterious disasters off the coast of Japan, he comes face to face with an ancient creature so powerful and so terrifying, it can reduce Tokyo to a smoldering graveyard. Nuclear weapon testing resurrected this relic from the Jurassic age, and now it's rampaging across Japan. At night, Godzilla wades through Tokyo leaving death and destruction in his wake, disappearing into Tokyo Bay when his rage subsides. Conventional weapons are useless against him; but renowned scientist Dr. Serizawa has discovered a weapon that could destroy all life in the bay - including Godzilla. But which disaster is worse, Godzilla's fury, of the death of Tokyo Bay?</li>
+<li>note: psychedelic colorization of the original</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/0ePtjMbETOI?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./ol92zk.jpg" alt="ol92zk.jpg" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org79661d3" class="outline-2">
+<h2 id="org79661d3"><span class="section-number-2">2.</span> 80s revival/90s run</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd1c6dba" class="outline-3">
+<h3 id="orgd1c6dba"><span class="section-number-3">2.1.</span> [1984] Godzilla 1985: The Legend is Reborn AKA Gojira AKA The Return of Godzilla by Kôji Hashimoto</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>From out of the South Seas comes a gigantic monster that attacks Tokyo and devastates Japan.The film, despite being preceded by other Godzilla movies, chronologically takes place after the first film, ignoring the events of the previous sequels. It was also the first in the Heisei Series of Godzilla films, despite being filmed in the Showa Era. It was Tanaka's intent to restore the darker themes and mood of the early films in the series. The film's redesign of Godzilla's facial features, giving him a darker appearance, would make the Heisei incarnation popular among fans.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/vsGyyApU868?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./5ha69x.jpg" alt="5ha69x.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org8543ac7" class="outline-3">
+<h3 id="org8543ac7"><span class="section-number-3">2.2.</span> [1991] Godzilla vs. King Ghidorah AKA Gojira vs. Kingu Gidorâ by Kazuki Ômori and Kôji Hashimoto</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Time travelers use Godzilla in their scheme to destroy Japan to prevent the country's future economic reign.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/IP3pN6S32Jk?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./ng798x.jpg" alt="ng798x.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org95a6636" class="outline-3">
+<h3 id="org95a6636"><span class="section-number-3">2.3.</span> [1992] Godzilla vs Mothra: The Battle for Earth AKA Gojira vs. Mosura by Takao Okawara</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>The Earth is headed for disaster and when an archeological research team visits Infant Island to find out why, they discover two tiny women who reveal that the Earth is fighting back for all the harm humans have done here and sends out the evil Battra to destroy us. The Cosmos, as the girls are called, offer their help by calling Mothra to battle the creature. Unfortunately, Godzilla also appears and a three way battle begins that threatens to destroy Japan.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/M4KzQRXL0bo?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./6saw24.jpg" alt="6saw24.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org530f9a9" class="outline-3">
+<h3 id="org530f9a9"><span class="section-number-3">2.4.</span> [1993] Godzilla vs. Mechagodzilla II AKA Gojira tai Mekagojira by Takao Okawara and Kazuki Ômori</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>In response to Japan's request for a countermeasure against Godzilla, UN engineers construct Mechagodzilla, a giant robotic version of Godzilla. Nonetheless, Godzilla proves himself a force to be reckoned with against this monstrosity and battle ensues.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/Lggl4LVqBag?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./b1ps7q.jpg" alt="b1ps7q.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgb5354fa" class="outline-3">
+<h3 id="orgb5354fa"><span class="section-number-3">2.5.</span> [1999] Godzilla 2000: Millennium AKA Gojira ni-sen mireniamu by Takao Okawara</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>Godzilla returns in a br and -new movie that ignores all preceding movies except for the original with a brand new look and a powered up atomic ray. This time he battles a mysterious UFO that later transforms into a mysterious kaiju dubbed Orga. They meet up for the final showdown in the city of Shinjuku.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/l8gii4hHCec?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./37o61f.jpg" alt="37o61f.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org02e6f1c" class="outline-3">
+<h3 id="org02e6f1c"><span class="section-number-3">2.6.</span> [2001] Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack AKA Gojira, Mosura, Kingu Gidorâ: Daikaijû sôkôgeki by Shûsuke Kaneko</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li>Three ancient guardian beasts awaken to protect Japan against Godzilla.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/JFKVedgBpdo?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./2g5r0r.jpg" alt="2g5r0r.jpg" />
+</p>
+</div>
+</div>
+<div id="outline-container-org67165b9" class="outline-3">
+<h3 id="org67165b9"><span class="section-number-3">2.7.</span> [2002] Godzilla Against MechaGodzilla AKA Gojira tai Mekagojira by Masaaki Tezuka and Kazuki Ômori</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li>A new Godzilla causes the JSDF to construct a cyborg countermeasure from the original monster's remains. The beast's restless soul is discovered to inhabit the machine as the pilot must learn to find value in her own life.</li>
+</ul>
+<p>
+<iframe width="375" height="335" src="https://www.youtube.com/embed/CkJ_n9ygZRw?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+<img src="./1w2402.jpg" alt="1w2402.jpg" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
